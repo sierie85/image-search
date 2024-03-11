@@ -1,7 +1,7 @@
 {
-  "name": "movie-poster-search",
+  "name": "image-search",
   "version": "1.0.0",
-  "description": "A movie poster search app",
+  "description": "Image search app using Next.js, Tailwind CSS and Pixabay-API",
   "author": "sbrie",
   "license": "MIT",
   "private": true,
