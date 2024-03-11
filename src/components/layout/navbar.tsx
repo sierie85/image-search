@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ThemeChanger from "@/components/layout/DarkSwitch";
 import { Disclosure } from "@headlessui/react";
+import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 
 /**
  * Renders the navbar component.
@@ -9,24 +10,28 @@ import { Disclosure } from "@headlessui/react";
  * @returns {JSX.Element} The rendered component.
  **/
 const Navbar = () => {
-  const navigation = ["Product", "Features", "Pricing", "Company", "Blog"];
+  const navigation = [
+    { text: "Search", link: "/search" },
+    { text: "About", link: "/about" },
+  ];
 
   return (
-    <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0">
+    <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0 border-b border-darkCyan-600 dark:border-white-600">
       {/* Logo  */}
       <Disclosure>
         {({ open }) => (
           <>
             <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
               <Link href="/">
-                <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
-                  <span>SimpleOne-Pager</span>
+                <span className="flex items-center space-x-2 text-2xl font-medium text-darkCyan-700 dark:text-linen-500">
+                  <MagnifyingGlassIcon className="w-6 h-6" />
+                  <span>Image-Search</span>
                 </span>
               </Link>
 
               <Disclosure.Button
                 aria-label="Toggle Menu"
-                className="px-2 py-1 ml-auto text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
+                className="px-2 py-1 ml-auto text-black-500 rounded-md lg:hidden hover:text-darkCyan-600 focus:text-darkCyan-600 focus:bg-indigo-100 focus:outline-none dark:text-white-500 dark:focus:bg-trueGray-700"
               >
                 <svg
                   className="w-6 h-6 fill-current"
@@ -54,18 +59,12 @@ const Navbar = () => {
                   {navigation.map((item, index) => (
                     <Link
                       key={index}
-                      href="/"
-                      className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none"
+                      href={item.link}
+                      className="w-full px-4 py-2 -ml-4 text-darkCyan-700 rounded-md dark:text-vanilla-500 hover:text-darkCyan-600 focus:text-darkCyan-600 focus:bg-indigo-100 dark:focus:bg-black-800 focus:outline-none"
                     >
-                      {item}
+                      {item.text}
                     </Link>
                   ))}
-                  <Link
-                    href="/"
-                    className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
-                  >
-                    Get Started
-                  </Link>
                 </>
               </Disclosure.Panel>
             </div>
@@ -79,25 +78,18 @@ const Navbar = () => {
           {navigation.map((menu, index) => (
             <li className="mr-3 nav__item" key={index}>
               <Link
-                href="/"
-                className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
+                href={menu.link}
+                className="inline-block px-4 py-2 text-lg font-normal text-darkCyan-700 no-underline rounded-md dark:text-vanilla-300 dark:hover:underline hover:text-darkCyan-600 focus:text-darkCyan-600 focus:bg-indigo-100 focus:outline-none dark:focus:bg-black-800"
               >
-                {menu}
+                {menu.text}
               </Link>
             </li>
           ))}
         </ul>
-      </div>
 
-      <div className="hidden mr-3 space-x-4 lg:flex nav__item">
-        <Link
-          href="/"
-          className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5"
-        >
-          Get Started
-        </Link>
-
-        <ThemeChanger />
+        <div className="hidden mr-3 space-x-4 lg:flex nav__item">
+          <ThemeChanger />
+        </div>
       </div>
     </nav>
   );

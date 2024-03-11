@@ -2,9 +2,7 @@ import Head from "next/head";
 import Footer from "@/components/layout/footer";
 import Header from "@/components/layout/header";
 import Hero from "@/components/hero";
-import SectionTitle from "@/components/sectionTitle";
-import Testimonials from "@/components/testimonials";
-import Faq from "@/components/faq";
+import ExampleImages from "@/components/exampleImages";
 
 /**
  * Renders the main application component.
@@ -16,22 +14,15 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Simple One-Pager-Template</title>
+        <title>Image-Search</title>
         <meta
           name="description"
-          content="Simple One-Pager-Template based on Nextly"
+          content="Search for Images using the Pixabay API"
         />
       </Head>
       <Header />
       <Hero />
-      <SectionTitle pretitle="section pretitle" title="Section Title">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto veniam
-        corrupti possimus porro quo ad modi suscipit cum, ipsa, repellendus
-        error, repellat nobis voluptatibus inventore obcaecati neque sed quas
-        nam.
-      </SectionTitle>
-      <Testimonials />
-      <Faq />
+      <ExampleImages />
       <Footer />
     </>
   );

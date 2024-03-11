@@ -8,7 +8,7 @@ import Navbar from "@/components/layout/navbar";
  **/
 export default function Header() {
   return (
-    <header className="w-full">
+    <header className="w-full dark:bg-raisinBlack-500">
       <Navbar />
     </header>
   );
