@@ -16,7 +16,7 @@ export default function ImageGallery({ images }: { images: PixabayImage[] }) {
       {images.map((image: PixabayImage) => (
         <a
           type="button"
-          className="mb-8 cursor-pointer"
+          className="block mb-8 cursor-pointer"
           key={image.id}
           onClick={() => {
             setShowModal(true);

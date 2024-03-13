@@ -12,11 +12,11 @@ export default function Modal({
   if (!singleImageData) return null;
 
   return (
-    <div className="fixed top-0 left-0 w-screen h-screen bg-black-600/75 flex items-center justify-center z-50 transition duration-300 ease-in-out">
+    <div className="fixed top-0 left-0 w-screen h-screen bg-black-600/75 flex items-center justify-center z-10 transition duration-300 ease-in-out">
       <div className="w-full h-full md:w-3/4 md:h-3/4 flex flex-col md:flex-row bg-vanilla-100 p-5">
         <button
           type="button"
-          className="md:hidden w-7 h-7 text-black-500 flex self-end"
+          className="md:hidden w-7 h-7 text-black-500 flex self-end border relative z-20"
           onClick={() => setShowModal(false)}
         >
           <XMarkIcon />
