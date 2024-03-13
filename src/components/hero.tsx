@@ -22,10 +22,10 @@ const Hero = () => {
             demonstration purposes only.
           </p>
 
-          <div className="flex md:flex-row md:items-start space-y-3 items-center flex-col mt-5">
+          <div className="flex flex-col md:flex-row items-center mt-5">
             <a
               href="#example"
-              className="px-8 py-4 text-lg font-medium text-center text-black-500 bg-darkCyan-400 dark:bg-linen-500 dark:text-raisinBlack-500 rounded-md "
+              className="px-8 py-4 text-lg font-medium text-center text-black-500 bg-darkCyan-400 dark:bg-linen-500 dark:text-raisinBlack-500 rounded-md md:mr-10 mr-0 mb-5 md:mb-0 "
             >
               See example search result
             </a>
