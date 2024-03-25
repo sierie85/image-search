@@ -9,10 +9,10 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <>
-      <div className="mx-auto flex flex-wrap bg-gradient-to-b from-white-500 to-tangerine-50 dark:bg-gradient-to-b dark:from-raisinBlack-500 dark:to-raisinBlack-700 py-10 md:py-1">
+      <div className="mx-auto flex flex-wrap bg-gradient-to-b from-white-500 to-tangerine-50 dark:bg-gradient-to-b dark:from-raisinBlack-500 dark:to-raisinBlack-600 py-10 md:py-1">
         <div className="w-full md:h-screen flex flex-col items-center justify-center">
           <h1 className="text-4xl font-bold leading-snug tracking-tight text-black-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-linen-500 animate-scaleIn">
-            Image-Search
+            Find all the Pictures you need
           </h1>
           <p className="w-3/4 md:w-1/2 py-7 text-center text-xl leading-normal text-black-500 lg:text-2xl xl:text-3xl dark:text-linen-500">
             Utilize the powerful Pixabay API to search for compelling images.

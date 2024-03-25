@@ -25,17 +25,19 @@ export default function Search() {
         />
       </Head>
       <Layout>
-        <Container>
-          <h1 className="text-4xl font-bold leading-snug tracking-tight text-black-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-linen-500 mb-5">
-            Search
-          </h1>
-          <div className="w-100">
-            <SearchInput setQuery={setQuery} submitHandler={submitHandler} />
-          </div>
-          {squery.length > 0 && (
-            <SearchResults query={squery} page={page} setPage={setPage} />
-          )}
-        </Container>
+        <div className="dark:bg-gradient-to-b dark:from-raisinBlack-500 dark:to-raisinBlack-700">
+          <Container>
+            <h1 className="text-4xl font-bold leading-snug tracking-tight text-black-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-linen-500 mb-5">
+              Search
+            </h1>
+            <div className="w-100">
+              <SearchInput setQuery={setQuery} submitHandler={submitHandler} />
+            </div>
+            {squery.length > 0 && (
+              <SearchResults query={squery} page={page} setPage={setPage} />
+            )}
+          </Container>
+        </div>
       </Layout>
     </>
   );

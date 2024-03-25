@@ -10,53 +10,55 @@ import Container from "@/components/layout/container";
  **/
 export default function Footer() {
   return (
-    <Container>
-      <div className="grid grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-darkCyan-600 dark:border-trueGray-700 lg:grid-cols-5">
-        <div className="lg:col-span-2">
+    <div className="dark:bg-raisinBlack-700">
+      <Container className="pt-0">
+        <div className="grid grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-darkCyan-600 dark:border-white-600 lg:grid-cols-5 ">
+          <div className="lg:col-span-2">
+            <div>
+              {" "}
+              <Link
+                href="/"
+                className="flex items-center space-x-2 text-2xl font-medium text-darkCyan-600 dark:text-linen-500"
+              >
+                <span>Image-Search</span>
+              </Link>
+            </div>
+
+            <div className="max-w-md mt-4 text-black-500 dark:text-linen-500">
+              Utilize the powerful Pixabay API to search for compelling images.
+              This sample use case demonstrates how to seamlessly integrate an
+              external API with Next.js, a popular framework for building web
+              applications. Keep in mind that this application is for
+              demonstration purposes only.
+            </div>
+          </div>
+
           <div>
-            {" "}
-            <Link
-              href="/"
-              className="flex items-center space-x-2 text-2xl font-medium text-darkCyan-600 dark:text-linen-500"
-            >
-              <span>Image-Search</span>
-            </Link>
+            <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0"></div>
           </div>
-
-          <div className="max-w-md mt-4 text-black-500 dark:text-linen-500">
-            Utilize the powerful Pixabay API to search for compelling images.
-            This sample use case demonstrates how to seamlessly integrate an
-            external API with Next.js, a popular framework for building web
-            applications. Keep in mind that this application is for
-            demonstration purposes only.
+          <div>
+            <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0"></div>
           </div>
-        </div>
-
-        <div>
-          <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0"></div>
-        </div>
-        <div>
-          <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0"></div>
-        </div>
-        <div className="">
-          <div className="dark:text-linen-500">Follow me</div>
-          <div className="flex mt-5 space-x-5 text-black-400 dark:text-vanilla-300">
-            <a
-              href="https://github.com/sierie85"
-              target="_blank"
-              rel="noopener"
-            >
-              <span className="sr-only">Github</span>
-              <Github />
-            </a>
+          <div className="">
+            <div className="dark:text-linen-500">Follow me</div>
+            <div className="flex mt-5 space-x-5 text-black-400 dark:text-vanilla-300">
+              <a
+                href="https://github.com/sierie85"
+                target="_blank"
+                rel="noopener"
+              >
+                <span className="sr-only">Github</span>
+                <Github />
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="my-10 text-sm text-center text-black-600 dark:text-linen-500">
-        Copyright © {new Date().getFullYear()} by sbrie
-      </div>
-    </Container>
+        <div className="my-10 text-sm text-black-600 dark:text-linen-500">
+          Copyright © {new Date().getFullYear()} by sbrie
+        </div>
+      </Container>
+    </div>
   );
 }
 

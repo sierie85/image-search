@@ -18,7 +18,7 @@ export default function ExampleImages() {
   }
 
   return (
-    <div className="dark:bg-raisinBlack-600 py-10">
+    <div className="dark:bg-raisinBlack-700 py-10">
       <Container>
         <h2 id="example" className="text-4xl py-7">
           Example Result of a Pixabay-API call with query &quot;yellow

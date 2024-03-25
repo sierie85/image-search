@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 import Container from "@/components/layout/container";
 import Loading from "@/components/loading";
 import useAxios from "@/hooks/useAxios";
@@ -47,7 +47,7 @@ export default function SearchResults({
   }
 
   return (
-    <Container className="p-0">
+    <Container className="pb-0">
       {isLoading && (
         <div className="w-screen h-screen fixed top-0 left-0 bg-black-500/50 flex items-center justify-center z-50">
           <Loading />
@@ -68,13 +68,15 @@ export default function SearchResults({
         />
       </div>
       <ImageGallery images={data.images} />
-      <hr />
-      <Pagination
-        page={page}
-        setPage={setPage}
-        total={data.total}
-        scrollToResultsRef={scrollToResultsRef}
-      />
+      {/* <hr className="my-10" /> */}
+      <div className="flex justify-end">
+        <Pagination
+          page={page}
+          setPage={setPage}
+          total={data.total}
+          scrollToResultsRef={scrollToResultsRef}
+        />
+      </div>
     </Container>
   );
 }

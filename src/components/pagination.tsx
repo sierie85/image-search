@@ -13,7 +13,7 @@ export default function Pagination({
 }) {
   return (
     <>
-      <div className="flex items-center justify-center bg-white px-4 py-10 sm:px-6">
+      <div className="flex items-center justify-center bg-white px-4 py-10 sm:px-0">
         <nav
           className="isolate inline-flex -space-x-px rounded-md shadow-sm"
           aria-label="Pagination"

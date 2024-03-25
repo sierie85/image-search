@@ -13,14 +13,16 @@ export default function About() {
         />
       </Head>
       <Layout>
-        <Container>
-          <h1 className="text-3xl">About</h1>
-          <p>
-            This is a sample application that demonstrates how to use the
-            Pixabay API to search for images. This application is built with
-            Next.js.
-          </p>
-        </Container>
+        <div className="min-h-96 g-gradient-to-b from-white-500 to-tangerine-50 dark:bg-gradient-to-b dark:from-raisinBlack-500 dark:to-raisinBlack-700">
+          <Container>
+            <h1 className="text-3xl">About</h1>
+            <p>
+              This is a sample application that demonstrates how to use the
+              Pixabay API to search for images. This application is built with
+              Next.js.
+            </p>
+          </Container>
+        </div>
       </Layout>
     </>
   );
